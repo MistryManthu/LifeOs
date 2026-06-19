@@ -8,20 +8,26 @@
     "start": "node index.js",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "supabase:link": "npx supabase link --project-ref tldtmzemzaafgxtdbyhv",
+    "supabase:migrate:new": "npx supabase migration new",
+    "supabase:db:push": "npx supabase db push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0",
     "@prisma/client": "^5.22.0",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3"
+    "jsonwebtoken": "^9.0.3",
+    "openai": "^6.44.0"
   },
   "devDependencies": {
+    "@supabase/cli": "^1.0.0",
     "nodemon": "^3.1.14",
     "prisma": "^5.22.0"
   }
