@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    background-color: #0A0A0F;
+    color: #F8F8FF;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #111118; }
+  ::-webkit-scrollbar-thumb { background: #2A2A3E; border-radius: 2px; }
+}
+
+@layer components {
+  /* Guardian message block — the AI's voice is always visually distinct */
+  .guardian-block {
+    @apply border-l-2 border-guardian bg-bg-raised pl-4 py-3 rounded-r-lg text-text-secondary text-sm leading-relaxed;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-bg-surface border border-bg-border rounded-xl p-5;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full bg-bg-raised border border-bg-border rounded-lg px-4 py-3
+           text-text-primary placeholder-text-muted text-sm
+           focus:outline-none focus:border-guardian transition-colors;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply bg-guardian hover:bg-opacity-90 text-white font-medium
+           px-5 py-2.5 rounded-lg text-sm transition-all active:scale-95;
+  }
+  .btn-ghost {
+    @apply text-text-secondary hover:text-text-primary hover:bg-bg-raised
+           px-4 py-2 rounded-lg text-sm transition-all;
+  }
+
+  /* Domain badge */
+  .domain-badge {
+    @apply text-xs font-medium px-2 py-0.5 rounded-full uppercase tracking-wide;
+  }
+}
